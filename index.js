@@ -17,7 +17,6 @@ app.get('/all-course',(req,res) => {
 
 // get single data
 app.get('/all-course/:id',(req,res) => {
-    // console.log(req.params.id);
     const id = parseInt(req.params.id);
     const singleData = fakeData.find(course => course.id === id) || [];
     res.send(singleData);
